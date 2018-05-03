@@ -3,9 +3,9 @@ import React from 'react';
 import { renderToString } from 'react-dom/server';
 
 import getTemperature from './utils';
-import Home from './home-page.jsx';
+import Home from './home-page';
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
