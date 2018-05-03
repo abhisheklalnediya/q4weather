@@ -4,6 +4,12 @@ const styles = {
   body: {
     color: '#595959',
     fontFamily: 'monospace',
+    display: 'flex',
+    justifyContent: 'center',
+  },
+  app: {
+    maxWidth: '750px',
+    display: 'inline-block',
   },
   center: {
     textAlign: 'center',
@@ -16,7 +22,10 @@ const styles = {
     marginLeft: '20px',
   },
   code: {
-    marginBottom: '25px', 
+    marginBottom: '25px',
+  },
+  button: {
+    color: '#333',
   },
 };
 
@@ -48,9 +57,9 @@ const Html = () => (
           </code>
         </div>
         <div>
-          <a className="button button-primary" href="/api/temperature/bengaluru">Bengaluru</a>
+          <a style={styles.button} className="button button-primary" href="/api/temperature/bengaluru">Bengaluru</a>
           <a className="button" style={{ margin: '0px 10px' }} href="/api/temperature/delhi">Delhi</a>
-          <a className="button button-primary" href="/api/temperature/thiruvananthapuram">Thiruvananthapuram</a>
+          <a style={styles.button} className="button button-primary" href="/api/temperature/thiruvananthapuram">Thiruvananthapuram</a>
         </div>
       </div>
     </body>

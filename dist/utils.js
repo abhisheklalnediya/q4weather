@@ -20,10 +20,8 @@ function getTemperature() {
   var query = new _yql2.default('select * from weather.forecast where woeid in (select woeid from geo.places(1) where text="' + city + '") AND u="' + unit + '"');
   query.exec(function (err, data) {
     if (err || !data.query.count) {
-      console.error(err);
       error();
     } else {
-      console.log(data);
       var location = data.query.results.channel.location;
       var condition = data.query.results.channel.item.condition;
 

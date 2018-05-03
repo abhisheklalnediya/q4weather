@@ -13,7 +13,13 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var styles = {
   body: {
     color: '#595959',
-    fontFamily: 'monospace'
+    fontFamily: 'monospace',
+    display: 'flex',
+    justifyContent: 'center'
+  },
+  app: {
+    maxWidth: '750px',
+    display: 'inline-block'
   },
   center: {
     textAlign: 'center'
@@ -27,6 +33,9 @@ var styles = {
   },
   code: {
     marginBottom: '25px'
+  },
+  button: {
+    color: '#333'
   }
 };
 
@@ -137,7 +146,7 @@ var Html = function Html() {
           null,
           _react2.default.createElement(
             'a',
-            { className: 'button button-primary', href: '/api/temperature/bengaluru' },
+            { style: styles.button, className: 'button button-primary', href: '/api/temperature/bengaluru' },
             'Bengaluru'
           ),
           _react2.default.createElement(
@@ -147,7 +156,7 @@ var Html = function Html() {
           ),
           _react2.default.createElement(
             'a',
-            { className: 'button button-primary', href: '/api/temperature/thiruvananthapuram' },
+            { style: styles.button, className: 'button button-primary', href: '/api/temperature/thiruvananthapuram' },
             'Thiruvananthapuram'
           )
         )
